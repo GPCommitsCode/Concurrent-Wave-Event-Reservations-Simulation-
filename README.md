@@ -1,46 +1,11 @@
 # CS558 - Computer Systems Lab
-## Group 18
+## Group 5
 
-v.subramanian@iitg.ac.in - Subramanian V<br>
-r.sri@iitg.ac.in - Sri Harsha R<br>
-d.neha@iitg.ac.in - Neha Dhuttargaon
+p.kaja@iitg.ac.in - Kaja Gnana Prakash<br>
+t.karreddula@iitg.ac.in -Tejas Chandra Karreddula<br>
+ashish1009@iitg.ac.in - Ashish Kumar Pal
 
-## Assignment 4 
-
-## Question1
-In this question, you will use ordinary pipes to implement an inter-process
-communication scheme for message passing between processes. Assume that there are
-two directories, d1 and d2, and there are different files in each one of them. Also, each
-file contains a short-length string of characters. You have to use a parent process that
-forks two children processes and have each child process check one of the directories.
-* Assume that child 1 (child 2) is responsible to check the directory d1 (directory
-d2, respectively). This child process has to create a list of names of the files in the
-directory and their contents.
-* After creating the list, each child process will send its list to the other child
-process using a pipe.
-* If one of the child processes encounters an error while reading the files in their
-directory, it should immediately convey the message to other child with its
-current updates using message passing scheme.
-* Upon receiving the list, child 2 (child 1) will create the files listed by child 1
-(child 2) in directory d2 (directory d1, respectively) and fill the files with their
-initial contents.
-After these steps, the directories d1 and d2 should be identical.
-## Question 2
-Write a C/C++ program that simulates a simple online exam system using message
-passing for inter-process communication. The program should prompt the user for the
-number of students taking the exam and the number of questions on the exam. The
-program should then create a child process for each student and use message queues to
-communicate the exam questions to the child process.
-* Each child process should randomly answer the questions and send the answers
-back to the parent process using another message queue.
-* The parent process should collect all the answers and grade each student's exam.
-* The program should display the grade for each student and the overall grade
-distribution for the exam.
-* After grading all the exams, the parent process should wait for all the child
-processes to finish using the message queue synchronization mechanism. If any
-child process fails to respond or terminates unexpectedly, the program should
-display a warning message and take appropriate action to handle the situation
-## Question 3
+## Problem Statement
 In this question, you write a multi-threaded Event-reservation system for Nehru Centre.
 Suppose that you have e events. The auditorium has a capacity c. Queries made to the
 reservation system are of three types:
